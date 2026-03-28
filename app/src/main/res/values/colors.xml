@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy_bg">#0A0F1E</color>
+    <color name="navy_light">#131B2E</color>
+    <color name="navy_card">#1A2540</color>
+    <color name="navy_border">#243050</color>
+    <color name="primary">#00C896</color>
+    <color name="primary_dim">#1A00C896</color>
+    <color name="income">#00C896</color>
+    <color name="expense">#FF5A5A</color>
+    <color name="income_bg">#1E00C896</color>
+    <color name="expense_bg">#1EFF5A5A</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8B9BBF</color>
+    <color name="text_tertiary">#4A5570</color>
+    <color name="gold">#F7B731</color>
+    <color name="blue_accent">#5B8FF9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

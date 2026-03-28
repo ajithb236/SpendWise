@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analytics"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_month_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Metric Cards Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout android:id="@+id/card_income"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="14dp" android:layout_marginEnd="5dp">
+                <View android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@drawable/dot_income"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Income" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                <TextView android:id="@+id/tv_analytics_income"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="₹0" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/card_spent"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="14dp" android:layout_marginHorizontal="5dp">
+                <View android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@drawable/dot_expense"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Spent" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                <TextView android:id="@+id/tv_analytics_expense"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="₹0" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/card_saved"
+                android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="14dp" android:layout_marginStart="5dp">
+                <View android:layout_width="8dp" android:layout_height="8dp"
+                    android:background="@drawable/dot_blue"
+                    android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Saved" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+                <TextView android:id="@+id/tv_analytics_saved"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="₹0" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Savings Rate Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Savings Rate"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/tv_savings_rate"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0%" android:textColor="@color/income"
+                    android:textSize="24sp" android:textStyle="bold"/>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_savings"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:progress="0"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_drawable"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView android:id="@+id/tv_savings_hint"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Aim for 20%+ savings rate"
+                android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Pie Chart -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spending by Category"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"/>
+        </LinearLayout>
+
+        <!-- Bar Chart -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6-Month Trend"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/analytics_bar_chart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

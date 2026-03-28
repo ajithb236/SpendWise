@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Original Merchant"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="6dp" />
+
+    <EditText
+        android:id="@+id/et_original_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. AMAZON MKTPLACE"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_tertiary"
+        android:singleLine="true"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Link to Existing Alias"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="6dp" />
+
+    <Spinner
+        android:id="@+id/spinner_existing_alias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Alias"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="6dp" />
+
+    <EditText
+        android:id="@+id/et_alias_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. Amazon"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_tertiary"
+        android:singleLine="true"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="6dp" />
+
+    <Spinner
+        android:id="@+id/spinner_alias_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/et_custom_alias_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:hint="Enter new category"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_tertiary"
+        android:singleLine="true" />
+
+</LinearLayout>

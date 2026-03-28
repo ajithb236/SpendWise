@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="40dp">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <ImageView android:id="@+id/btn_close"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:background="@drawable/card_background"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:tint="@color/text_primary" android:padding="10dp"
+                android:clickable="true" android:focusable="true"/>
+            <View android:layout_width="0dp" android:layout_weight="1" android:layout_height="1dp"/>
+            <ImageView android:id="@+id/btn_edit"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/card_background"
+                android:src="@android:drawable/ic_menu_edit"
+                android:tint="@color/primary" android:padding="10dp"
+                android:clickable="true" android:focusable="true"/>
+            <ImageView android:id="@+id/btn_delete"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:background="@drawable/icon_bg_expense"
+                android:src="@android:drawable/ic_menu_delete"
+                android:tint="@color/expense" android:padding="10dp"
+                android:clickable="true" android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Amount Display -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:layout_marginBottom="32dp">
+            <ImageView android:id="@+id/iv_tx_icon"
+                android:layout_width="72dp" android:layout_height="72dp"
+                android:background="@drawable/icon_bg_expense"
+                android:src="@android:drawable/ic_menu_recent_history"
+                android:tint="@color/expense" android:padding="18dp"
+                android:layout_marginBottom="12dp"/>
+            <TextView android:id="@+id/tv_tx_amount"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="-₹0.00" android:textColor="@color/expense"
+                android:textSize="42sp" android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+            <TextView android:id="@+id/tv_tx_type"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Expense · Category"
+                android:background="@drawable/icon_bg_expense"
+                android:textColor="@color/expense"
+                android:paddingHorizontal="14dp" android:paddingVertical="6dp"/>
+        </LinearLayout>
+
+        <!-- Details Card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_background"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:id="@+id/row_merchant" style="@style/DetailRow">
+                <TextView style="@style/DetailLabel" android:text="Merchant"/>
+                <TextView android:id="@+id/tv_detail_merchant" style="@style/DetailValue"/>
+            </LinearLayout>
+            <View style="@style/Separator"/>
+            <LinearLayout android:id="@+id/row_date" style="@style/DetailRow">
+                <TextView style="@style/DetailLabel" android:text="Date"/>
+                <TextView android:id="@+id/tv_detail_date" style="@style/DetailValue"/>
+            </LinearLayout>
+            <View style="@style/Separator"/>
+            <LinearLayout android:id="@+id/row_account" style="@style/DetailRow">
+                <TextView style="@style/DetailLabel" android:text="Account"/>
+                <TextView android:id="@+id/tv_detail_account" style="@style/DetailValue"/>
+            </LinearLayout>
+            <View style="@style/Separator"/>
+            <LinearLayout android:id="@+id/row_note" style="@style/DetailRow">
+                <TextView style="@style/DetailLabel" android:text="Note"/>
+                <TextView android:id="@+id/tv_detail_note" style="@style/DetailValue"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Alias Card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_background"
+            android:padding="16dp" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Merchant Alias" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/btn_edit_alias"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Edit" android:textColor="@color/primary" android:textSize="14sp"
+                    android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+            <EditText android:id="@+id/et_alias"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="@color/text_primary" android:textSize="15sp"
+                android:background="@null" android:enabled="false"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Set a custom display name for this merchant"
+                android:textColor="@color/text_tertiary" android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

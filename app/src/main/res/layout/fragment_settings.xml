@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Profile Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_background"
+            android:padding="18dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/icon_bg_income"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:tint="@color/primary"
+                android:padding="14dp"
+                android:layout_marginEnd="14dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Finances"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_profile_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 accounts · 0 transactions"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Stats Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_background"
+            android:padding="18dp"
+            android:layout_marginBottom="28dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:gravity="center">
+                <TextView android:id="@+id/tv_stat_net_worth"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="₹0" android:textColor="@color/primary"
+                    android:textSize="16sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Net Worth" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:gravity="center">
+                <TextView android:id="@+id/tv_stat_total_in"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="₹0" android:textColor="@color/income"
+                    android:textSize="16sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Total In" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:gravity="center">
+                <TextView android:id="@+id/tv_stat_total_out"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="₹0" android:textColor="@color/expense"
+                    android:textSize="16sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Total Out" android:textColor="@color/text_secondary" android:textSize="11sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Manage Section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="MANAGE" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:letterSpacing="0.08"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_background"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout android:id="@+id/row_budget"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="16dp" android:clickable="true" android:focusable="true">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Daily Budget" android:textColor="@color/text_primary" android:textSize="15sp"/>
+                    <TextView android:id="@+id/tv_budget_value"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Not set" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:tint="@color/text_tertiary"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/navy_border" android:layout_marginHorizontal="16dp"/>
+
+            <LinearLayout android:id="@+id/row_aliases"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="16dp" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Merchant Aliases" android:textColor="@color/text_primary" android:textSize="15sp"/>
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:tint="@color/text_tertiary"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/navy_border" android:layout_marginHorizontal="16dp"/>
+
+            <LinearLayout android:id="@+id/row_sms"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="16dp" android:clickable="true" android:focusable="true">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="SMS Detection" android:textColor="@color/text_primary" android:textSize="15sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Auto-detect transactions" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+                <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:tint="@color/text_tertiary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- About Section -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ABOUT" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:letterSpacing="0.08"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_background">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:padding="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="App Version" android:textColor="@color/text_primary" android:textSize="15sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="SpendWise 1.0.0" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

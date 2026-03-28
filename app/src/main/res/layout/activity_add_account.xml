@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="40dp">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="28dp">
+            <ImageView android:id="@+id/btn_close"
+                android:layout_width="44dp" android:layout_height="44dp"
+                android:background="@drawable/card_background"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:tint="@color/text_primary" android:padding="10dp"
+                android:clickable="true" android:focusable="true"/>
+            <TextView android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Add Account" android:textColor="@color/text_primary"
+                android:textSize="18sp" android:textStyle="bold" android:gravity="center"/>
+            <View android:layout_width="44dp" android:layout_height="44dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ACCOUNT NAME" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/et_name"
+            android:layout_width="match_parent" android:layout_height="50dp"
+            android:hint="e.g. Checking Account" android:textColorHint="@color/text_tertiary"
+            android:textColor="@color/text_primary" android:textSize="15sp"
+            android:background="@drawable/input_background" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="BANK" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/et_bank"
+            android:layout_width="match_parent" android:layout_height="50dp"
+            android:hint="e.g. Chase Bank" android:textColorHint="@color/text_tertiary"
+            android:textColor="@color/text_primary" android:textSize="15sp"
+            android:background="@drawable/input_background" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="CURRENT BALANCE" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:layout_marginBottom="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="50dp"
+            android:orientation="horizontal" android:background="@drawable/input_background"
+            android:gravity="center_vertical" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="₹" android:textColor="@color/text_secondary" android:textSize="18sp"/>
+            <EditText android:id="@+id/et_balance"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="0.00" android:textColorHint="@color/text_tertiary"
+                android:textColor="@color/text_primary" android:textSize="18sp"
+                android:background="@null" android:inputType="numberDecimal"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ACCOUNT NUMBER (OPTIONAL)" android:textColor="@color/text_secondary"
+            android:textSize="11sp" android:layout_marginBottom="8dp"/>
+        <EditText android:id="@+id/et_account_number"
+            android:layout_width="match_parent" android:layout_height="50dp"
+            android:hint="e.g. ••••4521" android:textColorHint="@color/text_tertiary"
+            android:textColor="@color/text_primary" android:textSize="15sp"
+            android:background="@drawable/input_background" android:paddingHorizontal="14dp"
+            android:layout_marginBottom="28dp"/>
+
+        <TextView android:id="@+id/tv_error"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/expense" android:textSize="13sp"
+            android:gravity="center" android:visibility="gone"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView android:id="@+id/btn_save"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Save Account" android:textColor="@color/white"
+            android:textSize="16sp" android:textStyle="bold"
+            android:background="@drawable/rounded_button_primary"
+            android:padding="16dp" android:gravity="center"
+            android:clickable="true" android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>
