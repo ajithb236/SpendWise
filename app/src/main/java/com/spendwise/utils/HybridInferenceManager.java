@@ -27,7 +27,7 @@ public class HybridInferenceManager {
     private final BertInferenceEngine bertEngine;
     private static final float CONFIDENCE_THRESHOLD = 0.95f;
     private static final int REQUIRED_EVIDENCE_SIGNALS = 3;
-    private static final Pattern NUMERIC_PATTERN = Pattern.compile("([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]{1,2})?|[0-9]+(?:\\.[0-9]{1,2})?)");
+    private static final Pattern NUMERIC_PATTERN = Pattern.compile("([0-9,]+(?:\\.[0-9]{1,2})?)");
     private static final Pattern DATE_PATTERN = Pattern.compile("\\b(\\d{2}[-/]\\d{2}(?:[-/]\\d{2,4})?)\\b");
     private static final Pattern INSTRUMENT_ID_PATTERN = Pattern.compile("(?i)(?:card|a/c|account|ac|ending)\\s*(?:xx|\\*|x)?\\s*(\\d{3,6})");
 

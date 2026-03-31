@@ -17,10 +17,10 @@ import java.util.regex.Pattern;
 public class TransactionParser {
 
     private static final Pattern AMOUNT_PATTERN = Pattern.compile(
-        "(?i)(?:rs\\.?|inr|₹)?\\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]{1,2})?)"
+        "(?i)(?:rs\\.?|inr|₹)?\\s*([0-9,]+(?:\\.[0-9]{1,2})?)"
     );
     private static final Pattern AMOUNT_CONTEXT_PATTERN = Pattern.compile(
-        "(?i)(?:rs\\.?|inr|₹)?\\s*([0-9,]+\\.?[0-9]{0,2})(?=\\s*(?:debited|credited|spent|paid|txn|withdrawn|sent|received))"
+        "(?i)(?:rs\\.?|inr|₹)?\\s*([0-9,]+(?:\\.[0-9]{1,2})?)(?=\\s*(?:debited|credited|spent|paid|txn|withdrawn|sent|received))"
     );
     private static final Pattern DATE_PATTERN = Pattern.compile(
         "\\b(\\d{2}[-/]\\d{2}(?:[-/]\\d{2,4})?)\\b"
